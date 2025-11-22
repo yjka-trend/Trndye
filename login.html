@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login – Trndye</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0d1117;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .box {
+            background: #161b22;
+            padding: 30px;
+            width: 320px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 0 12px rgba(0,0,0,0.6);
+        }
+        input {
+            width: 100%;
+            margin: 10px 0;
+            padding: 12px;
+            border-radius: 6px;
+            border: none;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #238636;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #2ea043;
+        }
+        .loading {
+            margin-top: 10px;
+            display: none;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Login</h2>
+        <input id="email" type="email" placeholder="Email">
+        <input id="pass" type="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <div id="loading" class="loading">Checking…</div>
+    </div>
+
+    <script>
+        function login() {
+            document.getElementById("loading").style.display = "block";
+
+            setTimeout(() => {
+                window.location.href = "dashboard.html";
+            }, 1500);
+        }
+    </script>
+</body>
+</html>
